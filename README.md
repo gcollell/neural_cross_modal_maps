@@ -22,7 +22,7 @@ The code already comes with vgg128 image embeddings (as they are compact and tak
 
 ## Step 1: Run the cross-modal mapping 
 
-This evaluates mNNO by running (inside the "code" folder): 
+Evaluate mNNO by running (inside the "code" folder): 
 
 python learn_and_eval.py
 
