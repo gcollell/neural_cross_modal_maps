@@ -2,7 +2,7 @@
 Code of the paper: Collell, G. & Moens, M-F. (2018) "Do Neural Network Cross-Modal Mappings Really Bridge Modalities?" ACL
 
 
-## DEPENDENCIES:
+# DEPENDENCIES:
 
 Python > 3.5
 tensorflow
@@ -10,17 +10,17 @@ tensorflow
 scikit-learn 0.19.1
 
 
-## HOW TO RUN THE CODE:
+# HOW TO RUN THE CODE:
 
 
-# Step 0 (OPTIONAL): Download the data 
+## Step 0 (OPTIONAL): Download the data 
 
 You can download it from http://liir.cs.kuleuven.be/software_pages/cross_modal_acl.php
 
 The code already comes with vgg128 image embeddings (as they are compact and take little space) 
 
 
-# Step 1: Run the cross-modal mapping 
+## Step 1: Run the cross-modal mapping 
 
 This evaluates mNNO by running (inside the "code" folder): 
 
