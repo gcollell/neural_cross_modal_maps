@@ -9,17 +9,17 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', default='iaprtc', help='OPTIONS: wiki, iaprtc, imagenet')
-    parser.add_argument('--n_runs', default=1, help='Number of runs. (applies to ALL datasets)')
-    parser.add_argument('--n_folds', default=5, help='Number of folds. (applies only to imagenet)')
+    parser.add_argument('--n_runs', default=1, type=int, help='Number of runs. (applies to ALL datasets)')
+    parser.add_argument('--n_folds', default=5, type=int, help='Number of folds. (applies only to imagenet)')
     # mapping
-    parser.add_argument('--epochs_max', default=50, help='max number of epochs')
+    parser.add_argument('--epochs_max', default=50, type=int, help='max number of epochs')
     parser.add_argument('--emb_txt', default=['biGRU'],
                         help='List [] of text embeddings. OPTIONS: None (=use all); glove, word2vec (for imagenet); biGRU (wiki & iaprtc)')
     parser.add_argument('--emb_vis', default=['vgg128'], help='List [] of visual embeddings. OPTIONS: None (=use all); vgg128, resnet')
     parser.add_argument('--mappings', default=['lin', 'nn'], help='OPTIONS: lin, nn')
     parser.add_argument('--directions', default=['i2t', 't2i'], help='OPTIONS: i2t (image-to-text), t2i (text-to-image)')
     # performanc measure
-    parser.add_argument('--k_neighbors', default=30, help='number of nearest neighbors to compute the mNNO')
+    parser.add_argument('--k_neighbors', default=30, type=int, help='number of nearest neighbors to compute the mNNO')
     # directory
     parser.add_argument('--trainDir', default='../training_data/', help='Directory where training data is stored')
 
