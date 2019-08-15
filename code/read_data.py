@@ -22,8 +22,8 @@ def read_and_prepare_dataset(dataset, emb_txt, emb_vis, direction, trainDir):
     X, Y, X_tr, Y_tr, X_ts, Y_ts, = [], [], [], [], [], []
 
     if dataset == 'imagenet':
-        _, EMB_vis = readDATA(trainDir + '/imagenet/vis_' + emb_vis + '_' + emb_txt + '.csv')
-        _, EMB_lang = readDATA(trainDir + '/imagenet/txt_' + emb_vis + '_' + emb_txt + '.csv')
+        _, EMB_vis = readDATA(trainDir + '/imagenet/vis_' + emb_vis + '.csv')
+        _, EMB_lang = readDATA(trainDir + '/imagenet/lang_' + emb_vis + '.csv')
         if direction == 't2i':
             X, Y = EMB_lang, EMB_vis
         elif direction == 'i2t':
